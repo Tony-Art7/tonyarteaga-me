@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Framework — Tony Arteaga</title>
+  <meta name="description" content="How I think about deploying AI in the enterprise — data, processes, people, governance, and architecture. The full picture most companies miss." />
+  <link rel="icon" type="image/png" href="assets/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="shortcut icon" href="assets/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="canonical" href="https://tonyarteaga.me/ai-framework.html">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <meta property="og:title" content="AI Framework — Tony Arteaga">
+  <meta property="og:description" content="How I think about deploying AI in the enterprise. Data, processes, people, governance — the full picture.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tonyarteaga.me/ai-framework.html">
+  <meta property="og:image" content="https://tonyarteaga.me/assets/headshot.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <style>
+    .gradient-text {
+      background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  </style>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body class="bg-gray-950 text-gray-100 antialiased">
+
+  <!-- Sticky nav -->
+  <div class="sticky top-0 z-50 bg-gray-950/95 backdrop-blur-sm border-b border-gray-800">
+    <div class="max-w-5xl mx-auto px-6 py-4">
+      <nav class="flex flex-col sm:flex-row justify-between sm:items-center gap-3">
+        <a href="index.html" class="text-xl font-semibold hover:text-white transition-colors">Tony Arteaga</a>
+        <div class="flex items-center gap-x-6 gap-y-2 flex-wrap text-sm text-gray-400">
+          <a href="index.html" class="hover:text-white transition-colors">Home</a>
+          <a href="about.html" class="hover:text-white transition-colors">About</a>
+          <a href="ai-journey.html" class="hover:text-white transition-colors">AI Journey</a>
+          <a href="ai-framework.html" class="text-white font-medium">AI Framework</a>
+          <a href="briefs.html" class="hover:text-white transition-colors">Briefs</a>
+          <a href="index.html#contact" class="hover:text-white transition-colors">Contact</a>
+          <a href="resume.html" class="px-4 py-1 rounded-full bg-white text-gray-900 font-medium hover:bg-gray-100 transition-colors">Resume</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <main class="max-w-5xl mx-auto px-6 pb-20">
+
+    <!-- Hero -->
+    <section class="py-16 md:py-20 text-center max-w-3xl mx-auto">
+      <p class="text-sm uppercase tracking-widest text-gray-500 mb-4">How I think about enterprise AI</p>
+      <h1 class="text-3xl md:text-4xl font-bold leading-tight">
+        It's not just about the agents.<br>
+        <span class="gradient-text">It's about everything around them.</span>
+      </h1>
+      <p class="mt-6 text-lg text-gray-400 max-w-2xl mx-auto">
+        Building an AI agent takes a weekend. Deploying it across an enterprise takes the right strategy. This is the lens I bring to any AI initiative — the full picture many companies miss.
+      </p>
+    </section>
+
+    <!-- 1. The Maturity Curve -->
+    <section class="py-12">
+      <h2 class="text-2xl font-bold mb-4">Where most companies actually are</h2>
+      <p class="text-gray-400 max-w-2xl mb-10">
+        There's a maturity curve from chatbots to agents — and most organizations are earlier on it than they think. Each stage requires different infrastructure, governance, and organizational readiness. I've seen this firsthand across enterprise rollouts.
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="relative p-6 rounded-2xl bg-gray-900 border border-gray-800">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center text-sm font-bold text-gray-300">1</div>
+            <h3 class="font-semibold text-lg">Chatbots</h3>
+          </div>
+          <p class="text-gray-400 text-sm">Passive Q&A. User asks, bot answers from a script or knowledge base. Limited context, no real decision-making.</p>
+          <p class="mt-3 text-xs text-gray-600 uppercase tracking-wide">Most companies are here</p>
+          <div class="hidden md:block absolute top-1/2 -right-3 text-gray-600 text-xl">→</div>
+        </div>
+        <div class="relative p-6 rounded-2xl bg-gray-900 border border-gray-700">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center text-sm font-bold text-blue-400">2</div>
+            <h3 class="font-semibold text-lg">Automated Workflows</h3>
+          </div>
+          <p class="text-gray-400 text-sm">AI handles defined tasks end-to-end — document processing, routing, extraction. Rigid but useful. Breaks when the process changes.</p>
+          <p class="mt-3 text-xs text-blue-500/60 uppercase tracking-wide">Growing adoption</p>
+          <div class="hidden md:block absolute top-1/2 -right-3 text-gray-600 text-xl">→</div>
+        </div>
+        <div class="p-6 rounded-2xl bg-gray-900 border border-indigo-500/30">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-8 h-8 rounded-full bg-indigo-500/20 flex items-center justify-center text-sm font-bold text-indigo-400">3</div>
+            <h3 class="font-semibold text-lg">Agent-Powered Operations</h3>
+          </div>
+          <p class="text-gray-400 text-sm">Semi-autonomous agents that reason, access company data, take actions, use tools, and coordinate with other agents. Requires mature infrastructure.</p>
+          <p class="mt-3 text-xs text-indigo-500/60 uppercase tracking-wide">Where the value is</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. The Enterprise AI Stack -->
+    <section class="py-12">
+      <h2 class="text-2xl font-bold mb-4">The real stack</h2>
+      <p class="text-gray-400 max-w-2xl mb-10">
+        AI isn't a layer you bolt on. It's a full stack — and every layer has to work for the whole thing to deliver. Most "AI strategies" only address two or three of these. I think about all of them.
+      </p>
+
+      <div class="max-w-2xl mx-auto space-y-2">
+        <div class="p-4 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center gap-4">
+          <div class="w-10 h-10 rounded-lg bg-indigo-500/20 flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold">Governance & Security</h3>
+            <p class="text-sm text-gray-400">Access controls, compliance, audit trails, responsible AI policies</p>
+          </div>
+        </div>
+        <div class="p-4 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center gap-4">
+          <div class="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold">People & Adoption</h3>
+            <p class="text-sm text-gray-400">Change management, training, trust-building, role evolution</p>
+          </div>
+        </div>
+        <div class="p-4 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center gap-4">
+          <div class="w-10 h-10 rounded-lg bg-indigo-500/20 flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold">Workflows & Processes</h3>
+            <p class="text-sm text-gray-400">Process mapping, automation design, cross-functional coordination</p>
+          </div>
+        </div>
+        <div class="p-4 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center gap-4">
+          <div class="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold">Models & Agents</h3>
+            <p class="text-sm text-gray-400">Agent design & build, orchestration, guardrails, evaluation</p>
+          </div>
+        </div>
+        <div class="p-4 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center gap-4">
+          <div class="w-10 h-10 rounded-lg bg-indigo-500/20 flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold">Data & Integration</h3>
+            <p class="text-sm text-gray-400">Data quality, system connectors, API strategy, breaking down silos</p>
+          </div>
+        </div>
+        <div class="p-4 rounded-xl bg-gray-500/10 border border-gray-500/20 flex items-center gap-4">
+          <div class="w-10 h-10 rounded-lg bg-gray-500/20 flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold">Infrastructure</h3>
+            <p class="text-sm text-gray-400">Cloud, compute, networking, identity, foundational platform</p>
+          </div>
+        </div>
+      </div>
+      <p class="text-center text-sm text-gray-500 mt-6">Every layer depends on the ones below it. Skip one and the whole thing is fragile.</p>
+    </section>
+
+    <!-- 3. Data Silos & Context Walls -->
+    <section class="py-12">
+      <div class="grid md:grid-cols-2 gap-10 items-start">
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Data silos & context walls</h2>
+          <p class="text-gray-400 mb-4">
+            The friction in enterprise AI isn't in the intelligence of the models — it's at the boundaries between your systems and people. Martech doesn't talk to ERP. Support tickets live in one tool, product feedback in another. Knowledge is trapped in spreadsheets, email threads, and shared drives.
+          </p>
+          <p class="text-gray-400">
+            Agents need grounding in real company data to be most effective. If your data is fragmented, your AI will be too — giving partial answers, missing context, or hallucinating because it can't see the full picture. I've navigated this across every enterprise platform I've built.
+          </p>
+        </div>
+        <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6">
+          <p class="text-sm text-gray-500 uppercase tracking-wide mb-4">What agents need access to</p>
+          <div class="grid grid-cols-3 gap-3">
+            <div class="text-center p-3 rounded-lg bg-gray-800/50">
+              <div class="text-lg mb-1">📄</div>
+              <p class="text-xs text-gray-400">Docs</p>
+            </div>
+            <div class="text-center p-3 rounded-lg bg-gray-800/50">
+              <div class="text-lg mb-1">📊</div>
+              <p class="text-xs text-gray-400">CRM</p>
+            </div>
+            <div class="text-center p-3 rounded-lg bg-gray-800/50">
+              <div class="text-lg mb-1">📧</div>
+              <p class="text-xs text-gray-400">Email</p>
+            </div>
+            <div class="text-center p-3 rounded-lg bg-gray-800/50">
+              <div class="text-lg mb-1">🏗️</div>
+              <p class="text-xs text-gray-400">ERP</p>
+            </div>
+            <div class="text-center p-3 rounded-lg bg-gray-800/50">
+              <div class="text-lg mb-1">💬</div>
+              <p class="text-xs text-gray-400">Chat</p>
+            </div>
+            <div class="text-center p-3 rounded-lg bg-gray-800/50">
+              <div class="text-lg mb-1">📅</div>
+              <p class="text-xs text-gray-400">Calendar</p>
+            </div>
+          </div>
+          <p class="text-xs text-gray-500 mt-4 text-center">Disconnected systems = disconnected AI</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Process Fragmentation -->
+    <section class="py-12">
+      <h2 class="text-2xl font-bold mb-4">Fragmented processes</h2>
+      <p class="text-gray-400 max-w-2xl mb-6">
+        Before you automate a workflow, you have to understand it. Many companies have undocumented, inconsistent processes — different teams doing the same thing three different ways. AI can amplify whatever it finds, including the mess. I always start by mapping before building.
+      </p>
+      <div class="rounded-2xl bg-gray-900 border border-gray-800 p-8 max-w-2xl">
+        <div class="space-y-4">
+          <div class="flex items-start gap-4">
+            <div class="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <span class="text-red-400 text-xs">✕</span>
+            </div>
+            <div>
+              <p class="font-medium">The naive approach</p>
+              <p class="text-sm text-gray-400">"Let's build an agent for our onboarding process." But which version? Sales does it one way, CS does it another, and EMEA has their own spreadsheet.</p>
+            </div>
+          </div>
+          <div class="border-t border-gray-800"></div>
+          <div class="flex items-start gap-4">
+            <div class="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <span class="text-green-400 text-xs">✓</span>
+            </div>
+            <div>
+              <p class="font-medium">The real approach</p>
+              <p class="text-sm text-gray-400">Map the process first. Identify variations, exceptions, and handoffs. Standardize where possible. Then design the agent around how work actually gets done.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. The People Problem -->
+    <section class="py-12">
+      <h2 class="text-2xl font-bold mb-4">The people problem</h2>
+      <p class="text-gray-400 max-w-2xl mb-8">
+        This variable can sink more AI rollouts than bad technology. People are afraid — of being replaced, of looking incompetent, of trusting a system they don't understand. And they're not wrong to be cautious. I've led teams through post-acquisition integrations and org transformations — the human side of change is always the hardest part.
+      </p>
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="p-5 rounded-2xl bg-gray-900 border border-gray-800">
+          <h3 class="font-semibold mb-2">Fear of replacement</h3>
+          <p class="text-sm text-gray-400">"If this agent can do my job, what happens to me?" Address it directly, honestly — reframe roles around higher-value work, not elimination (if true).</p>
+        </div>
+        <div class="p-5 rounded-2xl bg-gray-900 border border-gray-800">
+          <h3 class="font-semibold mb-2">Lack of trust</h3>
+          <p class="text-sm text-gray-400">"How do I know this is right?" Start with human-in-the-loop. Let people verify, correct, and build confidence before you remove guardrails.</p>
+        </div>
+        <div class="p-5 rounded-2xl bg-gray-900 border border-gray-800">
+          <h3 class="font-semibold mb-2">Change resistance</h3>
+          <p class="text-sm text-gray-400">"We've always done it this way." Change management isn't a phase — it's ongoing. Training, champions, quick wins, and visible leadership support.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Governance -->
+    <section class="py-12">
+      <h2 class="text-2xl font-bold mb-4">Governance, security & compliance</h2>
+      <p class="text-gray-400 max-w-2xl mb-8">
+        Every enterprise agent that touches company data raises real questions. Who can it access? What can it do? Where do the outputs go? These aren't afterthoughts — they're prerequisites. I've built PCI L1-compliant platforms and led enterprise security reviews. This is familiar territory.
+      </p>
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="p-5 rounded-2xl bg-gray-900 border border-gray-800 flex items-start gap-4">
+          <div class="w-8 h-8 rounded-lg bg-blue-950/70 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-1">Data access boundaries</h3>
+            <p class="text-sm text-gray-400">Define what each agent can see and do. Role-based access isn't optional when AI is acting on behalf of your people.</p>
+          </div>
+        </div>
+        <div class="p-5 rounded-2xl bg-gray-900 border border-gray-800 flex items-start gap-4">
+          <div class="w-8 h-8 rounded-lg bg-indigo-950/70 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-1">Audit trails</h3>
+            <p class="text-sm text-gray-400">Every action an agent takes should be logged, traceable, and reviewable. Black-box automation doesn't fly in regulated industries.</p>
+          </div>
+        </div>
+        <div class="p-5 rounded-2xl bg-gray-900 border border-gray-800 flex items-start gap-4">
+          <div class="w-8 h-8 rounded-lg bg-blue-950/70 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-1">Compliance & sovereignty</h3>
+            <p class="text-sm text-gray-400">Where does your data go? Who processes it? Industry regulations and data residency requirements don't disappear because you're using AI.</p>
+          </div>
+        </div>
+        <div class="p-5 rounded-2xl bg-gray-900 border border-gray-800 flex items-start gap-4">
+          <div class="w-8 h-8 rounded-lg bg-indigo-950/70 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-1">Centralized management</h3>
+            <p class="text-sm text-gray-400">One dashboard to see all agents, their permissions, usage, and performance. Shadow AI is a governance nightmare waiting to happen.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Measuring What Matters -->
+    <section class="py-12">
+      <h2 class="text-2xl font-bold mb-4">Measuring what matters</h2>
+      <p class="text-gray-400 max-w-2xl mb-8">
+        ROI isn't "we deployed 10 agents." It's whether those agents actually changed outcomes. I set clear metrics from day one — and honest evaluation throughout. Same approach I used scaling revenue orgs: if we can't measure it, we can't manage it.
+      </p>
+      <div class="rounded-2xl bg-gray-900 border border-gray-800 p-8">
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-semibold text-lg mb-2">Vanity metrics</h3>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li class="flex items-center gap-2"><span class="text-red-400">✕</span> Number of agents deployed</li>
+              <li class="flex items-center gap-2"><span class="text-red-400">✕</span> API calls per month</li>
+              <li class="flex items-center gap-2"><span class="text-red-400">✕</span> "AI-powered" features shipped</li>
+              <li class="flex items-center gap-2"><span class="text-red-400">✕</span> Executive demo impressions</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg mb-2">Real metrics</h3>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li class="flex items-center gap-2"><span class="text-green-400">✓</span> Adoption rate by target users</li>
+              <li class="flex items-center gap-2"><span class="text-green-400">✓</span> Time saved per workflow</li>
+              <li class="flex items-center gap-2"><span class="text-green-400">✓</span> Error reduction / quality improvement</li>
+              <li class="flex items-center gap-2"><span class="text-green-400">✓</span> Revenue or cost impact (actual $)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-12 text-center">
+      <div class="rounded-2xl bg-blue-950/40 border border-blue-900/60 p-10 max-w-2xl mx-auto">
+        <h2 class="text-2xl font-bold">This is how I think.</h2>
+        <p class="mt-4 text-gray-400">
+          Systems thinking applied to AI — the same way I've always approached building organizations. Data, processes, people, governance, architecture. Not just the tech.
+        </p>
+        <div class="mt-6 flex gap-3 justify-center flex-wrap">
+          <a href="about.html" class="px-5 py-2 rounded-full border border-gray-700 text-gray-400 hover:border-gray-500 hover:text-white transition-colors text-sm">How I work</a>
+          <a href="index.html#contact" class="px-5 py-2 rounded-full bg-blue-600 text-white font-medium hover:bg-blue-500 transition-colors text-sm">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-gray-800">
+    <div class="max-w-5xl mx-auto px-6 py-8 text-sm text-gray-500 text-center">
+      © <span id="y"></span> Tony Arteaga
+    </div>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>
