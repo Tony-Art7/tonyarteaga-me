@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1200px;
+      height: 628px;
+      background: #030712;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: #f3f4f6;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Large gradient orb — right side */
+    .orb {
+      position: absolute;
+      right: -40px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 520px;
+      height: 520px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 40% 40%,
+        rgba(96,165,250,0.20) 0%,
+        rgba(139,92,246,0.12) 40%,
+        transparent 70%);
+      pointer-events: none;
+    }
+
+    /* Concentric rings inside the orb */
+    .ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid;
+      right: -40px;
+      top: 50%;
+    }
+    .ring-1 {
+      width: 400px; height: 400px;
+      margin-top: -200px; margin-right: 20px;
+      border-color: rgba(96,165,250,0.15);
+    }
+    .ring-2 {
+      width: 280px; height: 280px;
+      margin-top: -140px; margin-right: 80px;
+      border-color: rgba(139,92,246,0.12);
+    }
+    .ring-3 {
+      width: 160px; height: 160px;
+      margin-top: -80px; margin-right: 140px;
+      border-color: rgba(96,165,250,0.10);
+    }
+
+    /* Small accent dot at center of rings */
+    .center-dot {
+      position: absolute;
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      background: rgba(96,165,250,0.5);
+      right: 198px;
+      top: 50%;
+      margin-top: -6px;
+      box-shadow: 0 0 20px rgba(96,165,250,0.3);
+    }
+
+    /* Thin horizontal accent line */
+    .accent-line {
+      position: absolute;
+      left: 80px;
+      right: 80px;
+      top: 50%;
+      height: 1px;
+      background: linear-gradient(90deg,
+        rgba(96,165,250,0.25) 0%,
+        rgba(139,92,246,0.15) 50%,
+        transparent 100%);
+      pointer-events: none;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      padding: 60px 80px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 720px;
+    }
+    .eyebrow {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #60a5fa;
+      margin-bottom: 20px;
+    }
+    .headline {
+      font-size: 56px;
+      font-weight: 700;
+      line-height: 1.08;
+      color: #ffffff;
+      margin-bottom: 18px;
+    }
+    .headline .accent {
+      background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .sub {
+      font-size: 21px;
+      color: #9ca3af;
+      line-height: 1.45;
+      margin-bottom: 32px;
+    }
+    .pills {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .pill {
+      padding: 7px 18px;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 500;
+      border: 1px solid;
+    }
+    .pill-blue {
+      background: rgba(96,165,250,0.1);
+      border-color: rgba(96,165,250,0.3);
+      color: #93c5fd;
+    }
+    .pill-gray {
+      background: rgba(255,255,255,0.05);
+      border-color: rgba(255,255,255,0.12);
+      color: #d1d5db;
+    }
+    .url {
+      position: absolute;
+      bottom: 32px;
+      right: 60px;
+      font-size: 15px;
+      color: #4b5563;
+      z-index: 2;
+      letter-spacing: 0.02em;
+    }
+  </style>
+</head>
+<body>
+  <div class="orb"></div>
+  <div class="ring ring-1"></div>
+  <div class="ring ring-2"></div>
+  <div class="ring ring-3"></div>
+  <div class="center-dot"></div>
+  <div class="accent-line"></div>
+
+  <div class="content">
+    <p class="eyebrow">Former CRO · Operator · AI-Ready</p>
+    <h1 class="headline">Strategy. People.<br><span class="accent">Execution.</span></h1>
+    <p class="sub">Built customer-facing orgs from scratch. Scaled revenue from $30M to $100M+ ARR.<br>Stanford AI/ML certified — equal parts operator and practitioner.</p>
+    <div class="pills">
+      <span class="pill pill-blue">$30M → $100M+ ARR</span>
+      <span class="pill pill-blue">Stanford AI/ML</span>
+      <span class="pill pill-gray">Teams from 0→1</span>
+      <span class="pill pill-gray">GTM · Solutions · AI Leadership</span>
+    </div>
+  </div>
+  <p class="url">tonyarteaga.me</p>
+</body>
+</html>

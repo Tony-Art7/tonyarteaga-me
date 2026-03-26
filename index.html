@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tony Arteaga — Business Architect & AI-Enabled Operator</title>
-  <meta name="description" content="Business architect who connects strategy, technology, and AI to build and scale organizations. Former CRO, $100M+ ARR. Stanford AI/ML certified." />
+  <title>Tony Arteaga — Enterprise Operator for GTM, Solutions & AI Transformation</title>
+  <meta name="description" content="Former CRO who scaled an enterprise platform from $30M to $100M+ ARR, built customer-facing teams from 0 to 1, and now helps companies connect strategy, technical teams, and AI execution." />
   <link rel="icon" type="image/png" href="assets/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="shortcut icon" href="assets/favicon.ico" />
@@ -14,13 +14,13 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="Tony Arteaga — Business Architect & AI-Enabled Operator">
-  <meta property="og:description" content="Business architect who connects strategy, technology, and AI. Former CRO, $100M+ ARR. Stanford AI/ML certified.">
+  <meta property="og:title" content="Tony Arteaga — Enterprise Operator for GTM, Solutions & AI Transformation">
+  <meta property="og:description" content="Former CRO, $100M+ ARR, 0 to 1 team builder, technically fluent operator focused on AI-enabled execution." />
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tonyarteaga.me/">
-  <meta property="og:image" content="https://tonyarteaga.me/assets/headshot.png">
+  <meta property="og:image" content="https://tonyarteaga.me/assets/Headshot_LinkedIn.png">
   <meta property="og:image:alt" content="Headshot of Tony Arteaga">
-  <meta name="twitter:image" content="https://tonyarteaga.me/assets/headshot.png">
+  <meta name="twitter:image" content="https://tonyarteaga.me/assets/Headshot_LinkedIn.png">
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Structured data -->
@@ -30,11 +30,11 @@
     "@type": "Person",
     "name": "Tony Arteaga",
     "url": "https://tonyarteaga.me/",
-    "jobTitle": "Business Architect & AI-Enabled Operator",
+    "jobTitle": "Enterprise Operator for GTM, Solutions & AI Transformation",
     "sameAs": [
       "https://www.linkedin.com/in/tonyart"
     ],
-    "image": "https://tonyarteaga.me/assets/headshot.png"
+    "image": "https://tonyarteaga.me/assets/Headshot_LinkedIn.png"
   }
   </script>
 
@@ -44,6 +44,46 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+    }
+    .hero-orb {
+      position: absolute;
+      right: -4rem;
+      top: 50%;
+      width: 28rem;
+      height: 28rem;
+      transform: translateY(-50%);
+      border-radius: 9999px;
+      background: radial-gradient(circle at 40% 40%, rgba(96, 165, 250, 0.16) 0%, rgba(167, 139, 250, 0.1) 38%, transparent 72%);
+      pointer-events: none;
+      filter: blur(2px);
+    }
+    .hero-ring {
+      position: absolute;
+      right: 1.75rem;
+      top: 50%;
+      border: 1px solid rgba(96, 165, 250, 0.16);
+      border-radius: 9999px;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+    .hero-ring.one {
+      width: 19rem;
+      height: 19rem;
+    }
+    .hero-ring.two {
+      width: 13rem;
+      height: 13rem;
+      right: 4.75rem;
+      border-color: rgba(167, 139, 250, 0.14);
+    }
+    .hero-accent-line {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(96, 165, 250, 0.2) 0%, rgba(167, 139, 250, 0.14) 55%, transparent 100%);
+      pointer-events: none;
     }
   </style>
   <script defer src="/_vercel/insights/script.js"></script>
@@ -55,64 +95,70 @@
     <div class="max-w-5xl mx-auto px-6 py-4">
       <nav class="flex flex-col sm:flex-row justify-between sm:items-center gap-3">
         <a href="index.html" class="text-xl font-semibold hover:text-white transition-colors">Tony Arteaga</a>
-        <div class="flex items-center gap-x-6 gap-y-2 flex-wrap text-sm text-gray-400">
+        <div class="flex items-center gap-x-4 gap-y-2 sm:gap-x-6 flex-wrap text-xs sm:text-sm text-gray-400">
           <a href="index.html" class="text-white font-medium">Home</a>
           <a href="about.html" class="hover:text-white transition-colors">About</a>
-          <a href="ai-playbook.html" class="hover:text-white transition-colors">AI Playbook</a>
-          <a href="ai-journey.html" class="hover:text-white transition-colors">AI Journey</a>
+          <a href="ai-pov.html" class="hover:text-white transition-colors">AI POV</a>
           <a href="briefs.html" class="hover:text-white transition-colors">Briefs</a>
+          <a href="resume.html" class="hover:text-white transition-colors">Resume</a>
           <a href="#contact" class="hover:text-white transition-colors">Contact</a>
-          <a href="resume.html" class="px-4 py-1 rounded-full bg-white text-gray-900 font-medium hover:bg-gray-100 transition-colors">Resume</a>
         </div>
       </nav>
     </div>
   </div>
 
   <header class="max-w-5xl mx-auto px-6 py-12">
-    <section class="grid md:grid-cols-2 gap-12 items-center">
-      <div>
-        <p class="text-sm font-medium text-blue-400 mb-3 uppercase tracking-wide">Business Architect · Operator · AI-Enabled</p>
+    <section class="relative isolate overflow-hidden grid md:grid-cols-[minmax(0,1fr)_20rem] gap-12 items-center rounded-[2rem] border border-gray-800 bg-gray-950/80 px-0 md:px-0">
+      <div class="hero-orb hidden md:block"></div>
+      <div class="hero-ring one hidden md:block"></div>
+      <div class="hero-ring two hidden md:block"></div>
+      <div class="hero-accent-line hidden md:block"></div>
+      <div class="relative z-10 md:pl-2">
+        <p class="text-sm font-medium text-blue-400 mb-3 uppercase tracking-wide">Enterprise Operator | GTM, Solutions, AI Transformation</p>
         <h1 class="text-3xl md:text-4xl font-bold leading-tight">
-          I build organizations where strategy, people, and technology connect
+          Former CRO who builds teams, aligns technical execution, and makes complex change stick
         </h1>
         <p class="mt-4 text-gray-400">
-          I think in systems — mapping the ecosystem, designing the plan, and building the teams that execute it. Customer-facing organizations from zero, scaled to $100M+ ARR, highest manager score company-wide. Now I bring AI into the playbook as an accelerant.
+          I built Sales, Pre-Sales, and Customer Success from zero and helped scale enterprise platform revenue from $30M to $100M+ ARR. My work sits where commercial goals, customer reality, and technical delivery all have to line up — and where the strategy behind them needs to hold up against the market.
         </p>
         <p class="mt-3 text-gray-400">
-          Technically fluent enough to architect the system, evaluate the trade-offs, and ask the right questions — without needing to write every line myself. Stanford AI/ML certified, building with RAG, agents, and agentic workflows. Whether I'm leading a team of people or a team of AI agents, the approach is the same: see the whole picture, set the quality bar, and make sure it ships.
+          Today I bring the same operating discipline to AI and other transformation efforts: clarify the problem, align stakeholders, work closely with technical teams, and make sure the solution gets adopted. I'm as comfortable leading a lean, high-output team as I am leading a larger organization. Stanford AI/ML certified, technically fluent, and comfortable leading through ambiguity.
         </p>
+        <div class="mt-5 flex flex-wrap gap-2 text-xs font-medium uppercase tracking-wide">
+          <span class="px-3 py-1 rounded-full bg-blue-950/50 text-blue-300 border border-blue-900/60">$100M+ ARR</span>
+          <span class="px-3 py-1 rounded-full bg-gray-900 text-gray-300 border border-gray-800">0 to 1 Team Builder</span>
+          <span class="px-3 py-1 rounded-full bg-indigo-950/50 text-indigo-300 border border-indigo-900/60">Stanford AI/ML</span>
+          <span class="px-3 py-1 rounded-full bg-gray-900 text-gray-300 border border-gray-800">USC MBA + Engineering</span>
+        </div>
         <div class="mt-6 flex gap-3 flex-wrap">
-          <a href="ai-playbook.html" class="px-5 py-2 rounded-full border border-gray-700 text-gray-400 hover:border-gray-500 hover:text-white transition-colors text-sm">See my AI playbook</a>
-          <a href="https://www.linkedin.com/in/tonyart" class="px-5 py-2 rounded-full bg-blue-600 text-white font-medium hover:bg-blue-500 transition-colors text-sm">LinkedIn</a>
+          <a href="resume.html" class="px-5 py-2 rounded-full bg-white text-gray-900 font-medium hover:bg-gray-100 transition-colors text-sm">View resume</a>
+          <a href="about.html#selected-work" class="px-5 py-2 rounded-full border border-gray-700 text-gray-300 hover:border-gray-500 hover:text-white transition-colors text-sm">See case studies</a>
+          <a href="https://www.linkedin.com/in/tonyart" class="px-5 py-2 rounded-full border border-blue-700 text-blue-300 hover:bg-blue-950/40 transition-colors text-sm">LinkedIn</a>
         </div>
       </div>
-      <div class="bg-gray-900 rounded-2xl border border-gray-800 p-6">
-        <p class="text-gray-400 text-xs uppercase tracking-wide font-medium mb-3">Why this combination works</p>
-        <ul class="space-y-3 text-sm text-gray-300">
-          <li class="flex items-start gap-2">
-            <span class="text-blue-400 mt-0.5">→</span>
-            <span><strong class="text-gray-100">Business depth:</strong> MBA (USC), Former CRO, scaled to $100M+ ARR, built customer-facing orgs from 0→1</span>
-          </li>
-          <li class="flex items-start gap-2">
-            <span class="text-blue-400 mt-0.5">→</span>
-            <span><strong class="text-gray-100">Technical fluency:</strong> BS Engineering (USC), architected cloud-native SaaS platforms, led enterprise integrations</span>
-          </li>
-          <li class="flex items-start gap-2">
-            <span class="text-blue-400 mt-0.5">→</span>
-            <span><strong class="text-gray-100">AI capability:</strong> Stanford AI/ML certs (NLP, ML, CV), hands-on with RAG, agents, and LLM workflows</span>
-          </li>
-          <li class="flex items-start gap-2">
-            <span class="text-blue-400 mt-0.5">→</span>
-            <span><strong class="text-gray-100">People + change:</strong> Highest manager score company-wide; navigated post-acquisition integrations and org transformations</span>
-          </li>
-        </ul>
+      <div class="relative z-10 space-y-4 md:max-w-xs md:justify-self-end">
+        <div class="bg-gray-900/90 rounded-3xl border border-gray-800 p-3 shadow-[0_20px_80px_rgba(3,7,18,0.35)]">
+          <img
+            src="assets/Headshot_LinkedIn.png"
+            alt="Tony Arteaga headshot"
+            class="w-full h-auto rounded-2xl object-cover max-h-[340px]"
+          />
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 rounded-full bg-blue-950/50 text-blue-300 border border-blue-900/60 text-xs font-medium uppercase tracking-wide">Cross-Functional Leadership</span>
+          <span class="px-3 py-1 rounded-full bg-gray-900 text-gray-300 border border-gray-800 text-xs font-medium uppercase tracking-wide">Enterprise Platforms</span>
+          <span class="px-3 py-1 rounded-full bg-indigo-950/50 text-indigo-300 border border-indigo-900/60 text-xs font-medium uppercase tracking-wide">AI Transformation</span>
+        </div>
+        <p class="text-sm text-gray-500">
+          Orange County, CA · Open to California-based or remote leadership roles.
+        </p>
       </div>
     </section>
   </header>
 
   <main class="max-w-5xl mx-auto px-6 pb-20">
 
-    <!-- How I Operate -->
+    <!-- Operating model -->
     <section class="mt-4">
       <div class="bg-blue-950/40 rounded-2xl p-6 border border-blue-900/60">
         <div class="flex items-center gap-2 mb-4">
@@ -123,86 +169,29 @@
         </div>
         <div class="grid md:grid-cols-4 gap-4 text-sm">
           <div>
-            <p class="font-semibold text-gray-200 mb-1">1. See the system</p>
-            <p class="text-gray-400">Map the ecosystem — business context, stakeholders, constraints, objectives. Ask the questions that connect the dots.</p>
+            <p class="font-semibold text-gray-200 mb-1">1. Clarify the problem</p>
+            <p class="text-gray-400">Map the business context, stakeholders, constraints, and objectives before teams start building.</p>
           </div>
           <div>
-            <p class="font-semibold text-gray-200 mb-1">2. Design the plan</p>
-            <p class="text-gray-400">Build a strategy that balances ambition with pragmatism. Refine iteratively until purpose and deliverables are clear.</p>
+            <p class="font-semibold text-gray-200 mb-1">2. Align the system</p>
+            <p class="text-gray-400">Translate between commercial needs, technical trade-offs, and delivery realities so the plan is coherent.</p>
           </div>
           <div>
             <p class="font-semibold text-gray-200 mb-1">3. Build the team & execute</p>
-            <p class="text-gray-400">Hire strong people, set clear standards, and orchestrate across teams, AI tools, and processes. I scale through people — not just through technology.</p>
+            <p class="text-gray-400">Hire strong people, set standards, create operating cadence, and keep execution moving across functions.</p>
           </div>
           <div>
-            <p class="font-semibold text-gray-200 mb-1">4. Manage & adapt</p>
-            <p class="text-gray-400">Monitor progress, adjust course, develop talent, and navigate organizational dynamics — inertia, politics, fear of change — and deliver.</p>
+            <p class="font-semibold text-gray-200 mb-1">4. Drive adoption</p>
+            <p class="text-gray-400">Measure outcomes, manage change, and make sure the solution works in the real organization, not just in the demo.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- AI Playbook Callout -->
-    <section class="mt-8">
-      <a href="ai-playbook.html" class="block bg-gray-900 rounded-2xl p-6 border border-gray-800 hover:border-gray-700 transition-colors group">
-        <div class="flex flex-col md:flex-row gap-6 items-center">
-          <div class="flex-1">
-            <div class="flex items-center gap-2 mb-2">
-              <span class="w-7 h-7 rounded-md bg-blue-950/70 flex items-center justify-center shrink-0">
-                <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
-              </span>
-              <span class="text-sm font-semibold text-blue-400 uppercase tracking-wide">Enterprise AI Playbook</span>
-            </div>
-            <p class="text-sm text-gray-400">How I think about deploying AI in the enterprise — data silos, fragmented processes, people fears, governance, and the full stack. It's not just about the agents.</p>
-          </div>
-          <div class="text-blue-400 font-medium flex items-center gap-1 shrink-0">
-            See my playbook <span aria-hidden="true">&rarr;</span>
-          </div>
-        </div>
-      </a>
-    </section>
-
-    <!-- AI Journey Callout -->
-    <section class="mt-8">
-      <a href="ai-journey.html" class="block bg-gray-900 rounded-2xl p-6 border border-gray-800 hover:border-gray-700 transition-colors">
-        <div class="flex flex-col md:flex-row gap-6 items-center">
-          <div class="flex-1">
-            <div class="flex items-center gap-2 mb-2">
-              <span class="w-7 h-7 rounded-md bg-indigo-950/70 flex items-center justify-center shrink-0">
-                <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
-              </span>
-              <span class="text-sm font-semibold text-indigo-400 uppercase tracking-wide">2024–2025 AI Deep Dive</span>
-            </div>
-            <ul class="space-y-2 text-sm text-gray-400">
-              <li class="flex items-start gap-2">
-                <span class="font-semibold text-gray-200 w-20 shrink-0">Stanford</span>
-                <span>School of Engineering AI/ML Certifications (NLP, ML, Computer Vision)</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="font-semibold text-gray-200 w-20 shrink-0">Claude</span>
-                <span>"Rigorous Autodidact" — first-principles thinker, systems builder</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="font-semibold text-gray-200 w-20 shrink-0">Gemini</span>
-                <span>"Engineer-Strategist" — bridges business strategy + technical depth</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="font-semibold text-gray-200 w-20 shrink-0">ChatGPT</span>
-                <span>Top 3% of users · "The Engineer" · 543 chats, 7K+ messages</span>
-              </li>
-            </ul>
-          </div>
-          <div class="text-indigo-400 font-medium flex items-center gap-1 shrink-0">
-            See my journey <span aria-hidden="true">&rarr;</span>
-          </div>
-        </div>
-      </a>
-    </section>
-
-    <!-- Track Record -->
+    <!-- Proof summary -->
     <section id="work" class="mt-16">
       <h2 class="text-2xl font-bold">Track record</h2>
-      <p class="mt-2 text-gray-500 text-sm">The proof points behind the model.</p>
+      <p class="mt-2 text-gray-500 text-sm">The shortest version of why this profile works.</p>
       <div class="mt-6 grid md:grid-cols-3 gap-6">
         <article class="bg-gray-900 rounded-xl border border-gray-800 p-5">
           <div class="flex items-center gap-2 mb-2">
@@ -211,46 +200,111 @@
             </span>
             <span class="text-xs font-semibold text-indigo-400 uppercase tracking-wide">Scale</span>
           </div>
-          <h3 class="font-semibold text-gray-100">$30M → $100M+ ARR</h3>
-          <p class="text-sm text-gray-400 mt-2">Built Sales, Pre-Sales & Customer Success from scratch. 30%+ YoY growth for 3 consecutive years as CRO.</p>
+            <h3 class="font-semibold text-gray-100">$30M to $100M+ ARR</h3>
+            <p class="text-sm text-gray-400 mt-2">Built Sales, Pre-Sales, and Customer Success from scratch and delivered 30%+ YoY ARR growth for three consecutive years.</p>
         </article>
         <article class="bg-gray-900 rounded-xl border border-gray-800 p-5">
           <div class="flex items-center gap-2 mb-2">
             <span class="w-7 h-7 rounded-md bg-blue-950/70 flex items-center justify-center shrink-0">
               <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
             </span>
-            <span class="text-xs font-semibold text-blue-400 uppercase tracking-wide">People</span>
+            <span class="text-xs font-semibold text-blue-400 uppercase tracking-wide">Leadership</span>
           </div>
-          <h3 class="font-semibold text-gray-100">Teams + transformation</h3>
-          <p class="text-sm text-gray-400 mt-2">50+ FTEs, offshore teams, post-acquisition integrations. Highest manager score company-wide. Built cultures that retain strong people.</p>
+            <h3 class="font-semibold text-gray-100">Teams, change, execution</h3>
+            <p class="text-sm text-gray-400 mt-2">Led teams from 10 to 50+ FTEs plus offshore support, navigated post-acquisition integration, and earned the highest manager score company-wide.</p>
         </article>
         <article class="bg-gray-900 rounded-xl border border-gray-800 p-5">
           <div class="flex items-center gap-2 mb-2">
             <span class="w-7 h-7 rounded-md bg-indigo-950/70 flex items-center justify-center shrink-0">
               <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
             </span>
-            <span class="text-xs font-semibold text-indigo-400 uppercase tracking-wide">AI + Tech</span>
+            <span class="text-xs font-semibold text-indigo-400 uppercase tracking-wide">Technical Depth</span>
           </div>
-          <h3 class="font-semibold text-gray-100">AI-augmented building</h3>
-          <p class="text-sm text-gray-400 mt-2">Stanford AI/ML certs. Building with RAG, agents, and LLM workflows. Cloud-native platform architecture (AWS, PCI L1). Technically fluent, AI-enabled.</p>
+          <h3 class="font-semibold text-gray-100">Fluent with engineering and AI</h3>
+          <p class="text-sm text-gray-400 mt-2">BS Engineering, cloud-native platform architecture, enterprise integrations, and recent applied AI work with RAG, workflows, and agent systems.</p>
         </article>
       </div>
     </section>
 
+    <!-- Best fit roles -->
+    <section class="mt-12">
+      <div class="bg-gray-900 rounded-2xl border border-gray-800 p-6 md:p-7">
+        <p class="text-gray-400 text-xs uppercase tracking-wide font-medium mb-3">Best fit roles</p>
+        <ul class="space-y-3 text-sm text-gray-300">
+          <li class="flex items-start gap-2">
+            <span class="text-blue-400 mt-0.5">→</span>
+            <span><strong class="text-gray-100">Revenue / GTM leadership with technical depth:</strong> align revenue teams, product, and engineering around real customer outcomes</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-blue-400 mt-0.5">→</span>
+            <span><strong class="text-gray-100">AI transformation leadership:</strong> connect strategy, workflows, governance, and adoption so new systems actually stick</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-blue-400 mt-0.5">→</span>
+            <span><strong class="text-gray-100">Head of Solutions:</strong> lead technical discovery, enterprise delivery, and cross-functional execution</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-blue-400 mt-0.5">→</span>
+            <span><strong class="text-gray-100">Strategic customer leadership:</strong> run complex enterprise accounts where trust, technical clarity, and execution all matter</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Case studies callout -->
+    <section class="mt-8">
+      <a href="about.html#selected-work" class="block bg-gradient-to-br from-gray-900 to-gray-950 rounded-2xl p-6 border border-indigo-900/40 hover:border-indigo-700/50 transition-colors">
+        <div class="flex flex-col md:flex-row gap-6 items-center">
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="w-7 h-7 rounded-md bg-indigo-950/70 flex items-center justify-center shrink-0">
+                <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-4m3 4V7m3 10v-6m3 6V5M4 19h16"></path></svg>
+              </span>
+              <span class="text-sm font-semibold text-indigo-400 uppercase tracking-wide">Selected Work</span>
+            </div>
+            <p class="text-sm text-gray-400">Three short case studies covering platform scale-up, architecture and integrations, and recent applied AI work.</p>
+          </div>
+          <div class="text-indigo-400 font-medium flex items-center gap-1 shrink-0">
+            Review case studies <span aria-hidden="true">&rarr;</span>
+          </div>
+        </div>
+      </a>
+    </section>
+
+    <!-- AI POV callout -->
+    <section class="mt-8">
+      <a href="ai-pov.html" class="block bg-gradient-to-br from-blue-950/25 to-gray-950 rounded-2xl p-6 border border-blue-900/40 hover:border-blue-700/50 transition-colors group">
+        <div class="flex flex-col md:flex-row gap-6 items-center">
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="w-7 h-7 rounded-md bg-blue-950/70 flex items-center justify-center shrink-0">
+                <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
+              </span>
+              <span class="text-sm font-semibold text-blue-400 uppercase tracking-wide">AI POV</span>
+            </div>
+            <p class="text-sm text-gray-400">My point of view on enterprise AI adoption: workflows, governance, data access, change management, and the operating model around the technology.</p>
+          </div>
+          <div class="text-blue-400 font-medium flex items-center gap-1 shrink-0">
+            See my AI POV <span aria-hidden="true">&rarr;</span>
+          </div>
+        </div>
+      </a>
+    </section>
+
     <!-- What I'm looking for -->
     <section id="about" class="mt-16">
-      <h2 class="text-2xl font-bold">What I'm looking for</h2>
+      <h2 class="text-2xl font-bold">What I&apos;m looking for</h2>
       <p class="mt-3 text-gray-400">
-        Roles where I can apply the full stack — business architecture, technical fluency, AI capability, and people leadership. GTM, Solutions, or AI-enabled leadership positions where the job is to build and deliver solutions that are high impact.
+        Leadership roles where I can connect strategy, technical teams, and execution: Revenue / GTM leadership with technical depth, AI transformation, Head of Solutions, or strategic customer leadership where the challenge is not just designing the answer but making it work inside the organization.
       </p>
       <p class="mt-3 text-gray-400">
-        California-based or fully remote. Also open to interim or fractional engagements.
+        California-based or fully remote. Also open to interim or fractional engagements where a company needs operating leverage quickly.
       </p>
-      <a href="about.html" class="inline-block mt-4 text-blue-400 font-medium hover:text-blue-300 transition-colors">More about how I think and work →</a>
+      <a href="about.html" class="inline-block mt-4 text-blue-400 font-medium hover:text-blue-300 transition-colors">More about how I work →</a>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="mt-16">
+    <section id="contact" class="mt-16 scroll-mt-20">
       <h2 class="text-2xl font-bold">Contact</h2>
       <form action="https://formspree.io/f/mlgnearb" method="POST" class="mt-4 grid gap-4 max-w-lg">
         <input type="text" name="_gotcha" style="display:none">

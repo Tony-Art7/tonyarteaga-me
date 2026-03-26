@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About — Tony Arteaga</title>
-  <meta name="description" content="Business architect who connects strategy, technology, and AI. 20+ years building and scaling customer-facing organizations. Stanford AI/ML certified." />
+  <meta name="description" content="Experienced enterprise operator who connects strategy, technical teams, and execution across GTM, customer delivery, and AI transformation." />
   <link rel="icon" type="image/png" href="assets/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="shortcut icon" href="assets/favicon.ico" />
@@ -19,6 +19,26 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgb(96 165 250);
+    }
+    .page-orb {
+      position: absolute;
+      inset: 0 auto auto 62%;
+      width: 26rem;
+      height: 26rem;
+      border-radius: 9999px;
+      background: radial-gradient(circle at 40% 40%, rgba(96, 165, 250, 0.14) 0%, rgba(167, 139, 250, 0.1) 38%, transparent 72%);
+      filter: blur(6px);
+      pointer-events: none;
+    }
+    .story-panel {
+      background: linear-gradient(180deg, rgba(17, 24, 39, 0.92) 0%, rgba(3, 7, 18, 0.92) 100%);
+    }
   </style>
   <script defer src="/_vercel/insights/script.js"></script>
 </head>
@@ -28,36 +48,54 @@
     <div class="max-w-5xl mx-auto px-6 py-4">
       <nav class="flex flex-col sm:flex-row justify-between sm:items-center gap-3">
         <a href="index.html" class="text-xl font-semibold hover:text-white transition-colors">Tony Arteaga</a>
-        <div class="flex items-center gap-x-6 gap-y-2 flex-wrap text-sm text-gray-400">
+        <div class="flex items-center gap-x-4 gap-y-2 sm:gap-x-6 flex-wrap text-xs sm:text-sm text-gray-400">
           <a href="index.html" class="hover:text-white transition-colors">Home</a>
           <a href="about.html" class="text-white font-medium">About</a>
-          <a href="ai-playbook.html" class="hover:text-white transition-colors">AI Playbook</a>
-          <a href="ai-journey.html" class="hover:text-white transition-colors">AI Journey</a>
+          <a href="ai-pov.html" class="hover:text-white transition-colors">AI POV</a>
           <a href="briefs.html" class="hover:text-white transition-colors">Briefs</a>
+          <a href="resume.html" class="hover:text-white transition-colors">Resume</a>
           <a href="index.html#contact" class="hover:text-white transition-colors">Contact</a>
-          <a href="resume.html" class="px-4 py-1 rounded-full bg-white text-gray-900 font-medium hover:bg-gray-100 transition-colors">Resume</a>
         </div>
       </nav>
     </div>
   </div>
 
-  <main class="max-w-5xl mx-auto px-6 pb-20">
+  <main class="relative max-w-5xl mx-auto px-6 pb-20">
+    <div class="page-orb hidden lg:block"></div>
     <!-- Hero — the thesis -->
-    <section class="mt-4">
-      <h1 class="text-3xl md:text-4xl font-bold leading-tight">The operator who connects strategy to execution</h1>
-      <p class="mt-4 text-gray-400 max-w-3xl text-lg">
-        Most organizations have business leaders on one side and technologists on the other. I build and lead the teams, systems, and processes that connect them. I've built customer-facing organizations from scratch and scaled revenue from $30M to $100M+ ARR. I scale through talented people, and now amplify that with AI.
-      </p>
+    <section class="relative mt-6 overflow-hidden rounded-[2rem] border border-gray-800 story-panel px-6 py-8 md:px-8 md:py-10">
+      <div class="grid gap-8 md:grid-cols-[minmax(0,1fr)_15rem] md:items-end">
+        <div>
+          <p class="section-label">About</p>
+          <h1 class="mt-3 text-3xl md:text-4xl font-bold leading-tight">I work in the gap between strategy and delivery</h1>
+          <p class="mt-4 text-gray-400 max-w-3xl text-base md:text-lg">
+            My work is to make sure strategy survives contact with reality. I define the problem clearly, align the teams that need to solve it, and help execution hold together across customers, product, engineering, and operations. I have done that building customer-facing organizations from scratch, scaling revenue from $30M to $100M+ ARR, and leading teams through complex change.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 gap-3 text-sm">
+          <div class="rounded-2xl border border-blue-900/50 bg-blue-950/30 p-4">
+            <p class="text-xs uppercase tracking-[0.18em] text-blue-300">Scale</p>
+            <p class="mt-2 text-2xl font-semibold text-white">$100M+</p>
+            <p class="mt-1 text-gray-400">ARR built and scaled</p>
+          </div>
+          <div class="rounded-2xl border border-gray-800 bg-gray-900/70 p-4">
+            <p class="text-xs uppercase tracking-[0.18em] text-gray-400">Leadership</p>
+            <p class="mt-2 text-2xl font-semibold text-white">10 to 50+</p>
+            <p class="mt-1 text-gray-400">FTE teams led across growth stages</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Business track record -->
     <section class="mt-12">
+      <p class="section-label">Foundation</p>
       <h2 class="text-2xl font-semibold">The business foundation</h2>
       <p class="mt-3 text-gray-400">
-        20+ years of building, hiring, and leading customer-facing organizations. This is what gives everything else context and direction — I know how to scale through people because I've done it repeatedly.
+        20+ years of building, hiring, and leading customer-facing organizations. That is the foundation under everything else here.
       </p>
       <div class="mt-6 grid md:grid-cols-2 gap-4">
-        <div class="bg-gray-900 rounded-xl border border-gray-800 p-5">
+        <div class="bg-gray-900 rounded-xl border border-indigo-900/40 p-5">
           <div class="flex items-center gap-2 mb-2">
             <span class="w-7 h-7 rounded-md bg-indigo-950/70 flex items-center justify-center shrink-0">
               <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
@@ -68,7 +106,7 @@
             Built Sales, Pre-Sales, and Customer Success from zero at OceanX. Scaled to $100M+ ARR. Defined roles, hired teams, set standards, created the operating rhythms.
           </p>
         </div>
-        <div class="bg-gray-900 rounded-xl border border-gray-800 p-5">
+        <div class="bg-gray-900 rounded-xl border border-blue-900/40 p-5">
           <div class="flex items-center gap-2 mb-2">
             <span class="w-7 h-7 rounded-md bg-blue-950/70 flex items-center justify-center shrink-0">
               <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
@@ -76,10 +114,10 @@
             <h3 class="font-semibold">Leading people through change</h3>
           </div>
           <p class="text-gray-400 text-sm">
-            Highest manager score company-wide at Guthy|Renker. Led post-acquisition integration at Tribune. 50+ FTEs plus offshore teams. I know how to bring people along — not just deploy technology at them.
+            Highest manager score company-wide at Guthy|Renker. Led post-acquisition integration at Tribune. Managed teams from 10 to 50+ FTEs plus offshore support. I know how to bring people along — not just deploy technology at them.
           </p>
         </div>
-        <div class="bg-gray-900 rounded-xl border border-gray-800 p-5">
+        <div class="bg-gray-900 rounded-xl border border-indigo-900/40 p-5">
           <div class="flex items-center gap-2 mb-2">
             <span class="w-7 h-7 rounded-md bg-indigo-950/70 flex items-center justify-center shrink-0">
               <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
@@ -90,7 +128,7 @@
             BS Engineering (USC). Architected cloud-native SaaS platform (AWS, PCI L1). Led technical integrations, API implementations, architecture reviews. I can sit in a room with engineers and add value.
           </p>
         </div>
-        <div class="bg-gray-900 rounded-xl border border-gray-800 p-5">
+        <div class="bg-gray-900 rounded-xl border border-blue-900/40 p-5">
           <div class="flex items-center gap-2 mb-2">
             <span class="w-7 h-7 rounded-md bg-blue-950/70 flex items-center justify-center shrink-0">
               <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
@@ -104,78 +142,167 @@
       </div>
     </section>
 
-    <!-- What "Business Architect" means -->
+    <!-- Role framing -->
     <section class="mt-12">
-      <h2 class="text-2xl font-semibold">What I mean by "business architect"</h2>
+      <p class="section-label">Role Fit</p>
+      <h2 class="text-2xl font-semibold">How to think about my role</h2>
       <p class="mt-3 text-gray-400">
-        I'm not a low-level code architect. I operate at the system level — seeing how business objectives, organizational dynamics, technology capabilities, and customer needs connect, then building the team and designing the plan that delivers. Think of it as the macro architecture of getting things done across people, process, and technology. Sometimes that means I'm hiring the first 10 people and defining roles. Sometimes it means leading 50+ across multiple functions. And sometimes — especially now — it means orchestrating a mix of human teams and AI agents toward the same objective.
+        I operate at the system level: business objectives, customer needs, technology constraints, organizational dynamics, and the people who have to make the work real. Sometimes that means hiring the first ten people and defining the roles. Sometimes it means leading a larger cross-functional organization. Increasingly, it also means deciding where AI belongs in the workflow and where human judgment still matters most.
       </p>
       <div class="mt-6 bg-blue-950/40 rounded-xl p-6 border border-blue-900/60">
-        <div class="grid md:grid-cols-2 gap-6">
-          <div>
-            <h3 class="font-semibold text-blue-400">What I bring to the table</h3>
-            <ul class="mt-2 text-gray-400 text-sm space-y-1 list-disc list-outside ml-4">
-              <li>Map the ecosystem and ask the right questions before building</li>
-              <li>Design plans that balance ambition with what's actually achievable</li>
-              <li>Hire, develop, and lead high-performing teams to execute</li>
-              <li>Orchestrate across teams, AI tools, and stakeholders</li>
-              <li>Set quality bars — coverage, security, usability, trade-offs</li>
-              <li>Navigate the human side: inertia, politics, fear of AI, org change</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="font-semibold text-blue-400">What I don't claim to be</h3>
-            <ul class="mt-2 text-gray-400 text-sm space-y-1 list-disc list-outside ml-4">
-              <li>A senior software engineer writing production code all day</li>
-              <li>A data scientist building models from scratch</li>
-              <li>Someone who needs to be — there's a clear and growing trend towards managing agent teams, not lines of code</li>
-            </ul>
-          </div>
+        <div>
+          <h3 class="font-semibold text-blue-400">Where I add value</h3>
+          <ul class="mt-2 text-gray-400 text-sm space-y-1 list-disc list-outside ml-4">
+            <li>Ensure that execution is anchored to a strategy that holds up — against product, customers, competition, and market reality</li>
+            <li>Define the real problem before teams overbuild or optimize the wrong thing</li>
+            <li>Ensure clarity between leadership, customers, product, and engineering without losing signal</li>
+            <li>Design the operating model: roles, handoffs, review rhythms, escalation paths, and standards</li>
+            <li>Lead through ambiguity, resistance, and organizational change without stalling execution</li>
+            <li>Evaluate technical trade-offs well enough to keep quality, security, usability, and delivery aligned</li>
+          </ul>
         </div>
       </div>
     </section>
 
     <!-- The AI layer -->
     <section class="mt-12">
+      <p class="section-label">AI Layer</p>
       <h2 class="text-2xl font-semibold">AI as an accelerant</h2>
       <p class="mt-3 text-gray-400">
-        I completed Stanford's AI Professional Program — four graduate-level certificates in ML, NLP, and Computer Vision. But the real value isn't the credentials. It's that I understand the technology well enough to know what's possible, what's hype, and how to apply it to real business problems.
+        I completed Stanford's AI Professional Program — four graduate-level certificates in ML, NLP, and Computer Vision. The point was not collecting credentials. It was building enough technical fluency to separate signal from hype and apply the tools to real business problems.
       </p>
       <p class="mt-3 text-gray-400">
-        I build with AI tools the same way the best operators work today: define the objective, architect the approach, orchestrate execution with AI agents and workflows, review the output, and iterate. I'm technically fluent enough to evaluate trade-offs, ask the right questions, and ensure quality — without pretending I need to write every line myself.
+        I use AI the same way I approach any operating problem: define the objective, understand the workflow, evaluate the architecture, and make sure the system is useful in practice. The value is not in novelty. It is in choosing where AI creates leverage, where guardrails are needed, and how adoption actually happens inside a team.
       </p>
       <div class="mt-6 bg-gray-900 rounded-xl border border-gray-800 p-6">
         <h3 class="font-semibold text-lg">What this looks like in practice</h3>
         <ul class="mt-3 space-y-2 text-gray-400 list-disc list-outside ml-4">
-          <li>Built multiple production websites using AI-augmented development (Claude Code CLI)</li>
+          <li>Built production websites using AI-augmented development workflows</li>
           <li>Designed and built RAG systems, ML pipelines, and multi-agent prototypes</li>
-          <li>Write analytical briefs that synthesize complex AI/business topics into clear, actionable insights</li>
-          <li>Evaluate AI architectures — chunking strategies, retrieval approaches, model selection, security considerations</li>
+          <li>Write analytical briefs that turn complex AI and business topics into clear operating decisions</li>
+          <li>Evaluate AI architectures, retrieval approaches, model selection, and security trade-offs</li>
         </ul>
-        <a href="ai-playbook.html" class="inline-block mt-4 text-blue-400 font-medium hover:text-blue-300 transition-colors text-sm">See my enterprise AI playbook →</a>
+        <a href="ai-pov.html" class="inline-block mt-4 text-blue-400 font-medium hover:text-blue-300 transition-colors text-sm">See my AI POV →</a>
       </div>
     </section>
 
     <!-- What makes this rare -->
     <section class="mt-12">
-      <h2 class="text-2xl font-semibold">Why this combination is rare</h2>
+      <p class="section-label">Why It Works</p>
+      <h2 class="text-2xl font-semibold">Why this combination is useful</h2>
       <p class="mt-3 text-gray-400">
-        People with deep business experience rarely invest in serious AI/ML education. People with AI skills rarely have 20 years of enterprise leadership and org-building. And almost nobody in either camp has actually built and led large teams through the kind of organizational change that AI adoption demands — the inertia, the politics, the fear of displacement, the gap between what technology can do and what people are ready to accept.
+        Many business leaders talk about AI at a high level but cannot engage the workflow, architecture, or delivery details. Many technical people understand the systems but have not spent years building revenue organizations, running strategic accounts, or leading teams through organizational friction. The value of my background is that I can hold both conversations at once.
       </p>
       <p class="mt-3 text-gray-400">
-        I've led organizations through exactly the kind of hard change that AI adoption demands — post-acquisition integrations, building functions from zero, scaling teams through ambiguity and resistance. 50+ person organizations, highest manager score company-wide, a track record of creating environments where strong people do their best work. That foundation — combined with real AI technical fluency and the ability to build trust through uncertainty — is what positions me to lead this next wave.
+        I've led organizations through exactly the kind of hard change that AI adoption demands — post-acquisition integrations, building functions from zero, scaling teams through ambiguity and resistance. Teams ranging from 10 to 50+ people, highest manager score company-wide, and a track record of creating environments where strong people do their best work. That foundation — combined with real AI technical fluency and the ability to build trust through uncertainty — is what positions me to lead this next wave.
       </p>
+    </section>
+
+    <!-- Selected work -->
+    <section id="selected-work" class="mt-12 scroll-mt-20">
+      <p class="section-label">Selected Work</p>
+      <h2 class="text-2xl font-semibold">Selected work</h2>
+      <p class="mt-3 text-gray-400 max-w-3xl">
+        A few representative examples of the pattern in my work: clarify the problem, align the teams, work effectively with technical stakeholders, and deliver outcomes that hold up in the business.
+      </p>
+
+      <div class="mt-6 bg-gradient-to-br from-indigo-950/20 to-gray-900 rounded-2xl border border-indigo-900/40 p-6 md:p-8">
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+          <div>
+            <p class="text-xs font-semibold text-indigo-400 uppercase tracking-wide">Case Study 1</p>
+            <h3 class="text-xl md:text-2xl font-semibold mt-2">Scaling an enterprise SaaS business from $30M to $100M+ ARR</h3>
+          </div>
+          <span class="text-sm text-gray-500">OceanX · CRO / SVP</span>
+        </div>
+        <div class="mt-6 grid md:grid-cols-2 gap-5 md:gap-6 text-sm">
+          <div>
+            <p class="font-semibold text-gray-100">Context</p>
+            <p class="mt-2 text-gray-400">The company needed to scale revenue and customer delivery at the same time. That required more than selling. It required building the customer-facing operating system: roles, handoffs, standards, strategic account coverage, and a tighter link to product and engineering.</p>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-100">What I did</p>
+            <p class="mt-2 text-gray-400">Built Sales, Pre-Sales, and Customer Success from zero. Hired and developed teams, led strategic accounts, ran technical discovery and solution scoping, and turned field feedback into product direction and operating cadence.</p>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-100">Outcome</p>
+            <p class="mt-2 text-gray-400">Scaled the platform from roughly $30M to $100M+ ARR with 30%+ YoY growth for three consecutive years. Improved the company&apos;s ability to sell, deliver, and retain enterprise customers at higher levels of complexity.</p>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-100">Why it matters now</p>
+            <p class="mt-2 text-gray-400">It is the same pattern companies face in AI transformation: multiple teams, real delivery risk, executive expectations, and technical detail that matters.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 bg-gradient-to-br from-blue-950/20 to-gray-900 rounded-2xl border border-blue-900/40 p-6 md:p-8">
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+          <div>
+            <p class="text-xs font-semibold text-blue-400 uppercase tracking-wide">Case Study 2</p>
+            <h3 class="text-xl md:text-2xl font-semibold mt-2">Architecting the platform and technical delivery behind enterprise commerce</h3>
+          </div>
+          <span class="text-sm text-gray-500">OceanX · VP Digital & eCommerce</span>
+        </div>
+        <div class="mt-6 grid md:grid-cols-2 gap-5 md:gap-6 text-sm">
+          <div>
+            <p class="font-semibold text-gray-100">Context</p>
+            <p class="mt-2 text-gray-400">Before the commercial organization could scale, the platform itself had to support enterprise customers: cloud architecture, integrations, onboarding patterns, delivery quality, and a cleaner path from technical discovery to customer value.</p>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-100">What I did</p>
+            <p class="mt-2 text-gray-400">Built and led the technical e-commerce team from scratch, owned platform architecture and customer delivery, led integrations and API implementations, and created templates and playbooks that made delivery more repeatable.</p>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-100">Outcome</p>
+            <p class="mt-2 text-gray-400">Helped ship a cloud-native AWS subscription commerce platform, supported PCI Level 1 requirements, accelerated customer time-to-value, and reduced cart abandonment by 25% through better architecture and delivery patterns.</p>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-100">Why it matters now</p>
+            <p class="mt-2 text-gray-400">This is the technical layer behind my operator profile: I can work inside architecture, integration, and delivery detail while keeping the business objective in view.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 bg-gradient-to-br from-emerald-950/20 to-gray-900 rounded-2xl border border-emerald-900/40 p-6 md:p-8">
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+          <div>
+            <p class="text-xs font-semibold text-emerald-400 uppercase tracking-wide">Case Study 3</p>
+            <h3 class="text-xl md:text-2xl font-semibold mt-2">Applied AI: from coursework to practical systems</h3>
+          </div>
+          <span class="text-sm text-gray-500">Independent · 2023 to present</span>
+        </div>
+        <div class="mt-6 grid md:grid-cols-2 gap-5 md:gap-6 text-sm">
+          <div>
+            <p class="font-semibold text-gray-100">Context</p>
+            <p class="mt-2 text-gray-400">I wanted recent, practical fluency in AI, not just executive-level familiarity. That meant formal study plus hands-on work building small systems, evaluating trade-offs, and understanding where AI fits in real workflows.</p>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-100">What I did</p>
+            <p class="mt-2 text-gray-400">Completed Stanford graduate coursework in ML, NLP, and Computer Vision. Built RAG prototypes, multi-agent workflows, and evaluation-oriented experiments using Python, PyTorch, and LLM APIs. Used AI-assisted tooling to ship production websites and test practical delivery patterns.</p>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-100">Outcome</p>
+            <p class="mt-2 text-gray-400">Developed enough technical fluency to evaluate architecture choices, spot weak assumptions, and translate business problems into workflow, data, and AI designs. The result is not just theory; it is an operator&apos;s working understanding of how these systems behave.</p>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-100">Why it matters now</p>
+            <p class="mt-2 text-gray-400">My value is in connecting the strategy conversation to workflow design, technical judgment, governance, and adoption.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- What I'm looking for -->
     <section class="mt-12">
+      <p class="section-label">Open To</p>
       <h2 class="text-2xl font-semibold">What I'm looking for</h2>
-      <p class="mt-3 text-gray-400">
-        Roles where I can apply the full stack — business architecture, technical fluency, AI capability, and people leadership. GTM, Solutions, or AI-enabled leadership positions where the job is to build and deliver solutions that are high impact.
-      </p>
-      <p class="mt-3 text-gray-400">
-        California-based or fully remote. Also open to interim or fractional engagements.
-      </p>
+      <div class="mt-4 rounded-2xl border border-gray-800 bg-gray-900/80 p-6">
+        <p class="text-gray-400">
+          Roles where I can connect strategy, technical teams, customer reality, and execution. Best fit is Revenue / GTM leadership with technical depth, AI transformation, Head of Solutions, or strategic customer leadership where the challenge is making the system work end to end.
+        </p>
+        <p class="mt-3 text-gray-400">
+          California-based or fully remote. Also open to interim or fractional engagements where the need is immediate operating leverage.
+        </p>
+      </div>
     </section>
 
     <!-- CTA -->
